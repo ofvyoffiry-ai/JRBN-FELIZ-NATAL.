@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Natal - JRBN</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background: url("https://raw.githubusercontent.com/ofvyoffiry-ai/JRBN-feliz-natal-/7f024be7fee79908e0a283ad25313ed7529d924b/A_festive_digital_digital_greeting_card_for_JRBN_c.png") no-repeat center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow:hidden;
+}
+
+/* Card */
+.card{
+  position:relative;
+  background: rgba(0,0,0,0.6);
+  padding:45px;
+  border-radius:30px;
+  color:white;
+  text-align:center;
+  max-width:500px;
+  box-shadow:0 0 60px rgba(0,0,0,0.9);
+  z-index:2;
+  animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  0%{box-shadow:0 0 20px #ffd700;}
+  100%{box-shadow:0 0 50px #ff4500;}
+}
+
+h1{
+  font-size:3em;
+  color:#ffd700;
+  text-shadow:0 0 20px #ffd700, 0 0 40px #ff6347;
+}
+.brand{
+  font-size:2.5em;
+  font-weight:900;
+  letter-spacing:4px;
+  color:#00ffd5;
+  text-shadow:0 0 20px #00ffd5,0 0 40px #00ffff;
+  margin:15px 0 25px;
+}
+p{
+  font-size:1.3em;
+  line-height:1.7;
+}
+.footer{
+  margin-top:25px;
+  font-size:1.4em;
+  font-weight:bold;
+  color:#ffd700;
+}
+
+/* Neve */
+.snow{
+  position:absolute;
+  top:-10px;
+  color:white;
+  font-size:1em;
+  user-select:none;
+  animation:fall linear infinite;
+  opacity:0.8;
+}
+@keyframes fall{
+  to{
+    transform:translateY(110vh);
+  }
+}
+
+/* Presentes animados */
+.gift{
+  position:absolute;
+  font-size:24px;
+  animation:giftFall linear infinite;
+}
+@keyframes giftFall{
+  to{
+    transform:translateY(110vh);
+  }
+}
+
+/* Estrelas piscando */
+.star{
+  position:absolute;
+  color: #fffacd;
+  font-size: 14px;
+  animation:blink 1.5s infinite;
+}
+@keyframes blink{
+  0%,100%{opacity:0.2;}
+  50%{opacity:1;}
+}
+</style>
+</head>
+<body>
+
+<!-- Música Natalícia -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2021/12/06/audio_3f92e8f5d8.mp3?filename=jingle-bells-11015.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Neve, Presentes e Estrelas -->
+<script>
+for(let i=0;i<50;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.animationDuration=(3+Math.random()*5)+"s";
+  snow.style.fontSize=(10+Math.random()*20)+"px";
+  document.body.appendChild(snow);
+}
+
+/* Presentes 🎁 */
+for(let i=0;i<12;i++){
+  let gift=document.createElement("div");
+  gift.className="gift";
+  gift.innerHTML="🎁";
+  gift.style.left=Math.random()*100+"vw";
+  gift.style.animationDuration=(5+Math.random()*5)+"s";
+  gift.style.fontSize=(15+Math.random()*25)+"px";
+  document.body.appendChild(gift);
+}
+
+/* Estrelas ✨ */
+for(let i=0;i<25;i++){
+  let star=document.createElement("div");
+  star.className="star";
+  star.innerHTML="✨";
+  star.style.left=Math.random()*100+"vw";
+  star.style.top=Math.random()*50+"vh";
+  star.style.animationDuration=(1+Math.random()*2)+"s";
+  document.body.appendChild(star);
+}
+</script>
+
+<div class="card">
+  <h1>🎄 FELIZ NATAL 🎄</h1>
+
+  <div class="brand">JRBN</div>
+
+  <p>
+    A <strong>JRBN</strong> deseja a todos os seus clientes<br>
+    um Natal cheio de <strong>paz, saúde,<br>
+    amor e prosperidade</strong>.
+  </p>
+
+  <p>
+    Obrigado pela confiança.<br>
+    Que venham mais conquistas! ✨
+  </p>
+
+  <div class="footer">— JRBN</div>
+</div>
+
+</body>
+  </html>
